@@ -17,10 +17,10 @@ app.get("/app", (_, rs) => {
     rs.send("200 OK"); 
 })
 app.get("/app/rps", (_, rs) => {
-    rs.send(JSON.stringify(rpsls.rpsDefault())); 
+    rs.send(JSON.stringify(rpsls.rpsDef())); 
 }) 
 app.get("/app/rpsls", (_, rs) => {
-    rs.send(JSON.stringify(rpsls.rpslsDefault())); 
+    rs.send(JSON.stringify(rpsls.rpslsDef())); 
 })
 app.post("/app/rps/play", (rq, rs) => {
     rs.send(JSON.stringify(rpsls.rps(rq.body["shot"])))
