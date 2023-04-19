@@ -37,7 +37,7 @@ app.post("/app/rps/play", (rq, rs) => {
 app.get("/app/rpsls/play", (rq, rs) => {
     rs.send(JSON.stringify(rpsls.rpsls(rq.query["shot"])))
 })
-app.post("/app/rps/play/:shot", (rq, rs) => {
+app.get("/app/rps/play/:shot", (rq, rs) => {
     rs.send(JSON.stringify(rpsls.rpsls(rq.params["shot"])))
 })
 app.get("*", (_, rs) => {
